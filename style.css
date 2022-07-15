@@ -88,6 +88,7 @@ nav {
     display: none;
 }
 
+/* when screen is over 800px width the links go fixed to the nav and social media icons get visible  */
 @media screen and (min-width: 800px) {
     .nav-center {
         margin: 0 auto;
