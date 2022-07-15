@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid grey; */
+}
+
+:root {
+    --navbar-bgc: #ffb266;
+    --navbar-bgc-lighter: #FFD5A9;
+    --navbar-bgc-medium: #FFC58A;
+    --transition: all 0.2s linear;
+    --text-shadow: 2px 2px 2px #d0d0d0;
+}
+
+body {
+    font-size: 1rem;
+    text-transform: initial;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    box-shadow: var(--text-shadow);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--navbar-bgc);
+}
+
+.nav-toggle {
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 3px;
+    border: transparent;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.links a {
+    background-color: var(--navbar-bgc-medium);
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    background: var(--navbar-bgc-lighter);
+    padding-left: 1.5rem;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+}
+
+.show-links {
+    overflow: visible;
+}
+
+.social-icons {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: var(--navbar-bgc);
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-header {
+        padding: 0;
+    }
+
+    .links {
+        display: flex;
+        height: auto;
+    }
+
+    .links a {
+        background-color: inherit;
+        padding: 0;
+        margin: 0 1rem;
+    }
+
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+        color: var(--navbar-bgc-lighter);
+    }
+
+    .social-icons {
+        display: flex;
+    }
+
+    .social-icons a {
+        margin: 0 0.6rem;
+        color: #fff;
+    }
+
+    .social-icons a:hover {
+        color: var(--navbar-bgc-lighter);
+    }
+}
